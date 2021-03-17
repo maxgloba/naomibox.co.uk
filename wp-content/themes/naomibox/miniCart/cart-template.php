@@ -7,12 +7,10 @@
       <?php echo theCartItems(); ?>
     </div>
 
-    <?php if(theDiscount()): ?>
     <div class="cart-discount">
       Discount:
       <span class="cartDiscount"><?php echo theDiscount(); ?></span>
     </div>
-    <?php endif ?>
 
     <div class="cart-total">
       Total:

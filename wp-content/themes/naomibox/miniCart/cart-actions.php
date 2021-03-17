@@ -130,7 +130,9 @@ function theDiscount(){
   global $woocommerce;
   $items_count = $woocommerce->cart->cart_contents_count;
   $discount = false;
-  if( $items_count == 2 ) {
+  if( $items_count == 1 ) {
+    $discount = '0%';
+  } else if( $items_count == 2 ) {
     $discount = '-10%';
   } else if( $items_count == 3 ){
     $discount = '-15%';
