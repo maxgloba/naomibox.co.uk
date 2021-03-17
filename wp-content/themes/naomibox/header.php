@@ -37,7 +37,7 @@
       <header class="main-header">
         <div class="container">
           <div class="main-header__logo">
-            <img src="<?php echo IMG; ?>/logo-white.png" alt="">
+            <a href="<?php echo home_url(); ?>"><img src="<?php echo IMG; ?>/logo-white.png" alt=""></a>
             <span>Naomi Box</span>
           </div>
           <ul class="main-header__info">
@@ -65,7 +65,7 @@
       <header class="main-header">
         <div class="container">
           <div class="main-header__logo">
-            <img src="<?php echo IMG; ?>/logo-white.png" alt="">
+            <a href="<?php echo home_url(); ?>"><img src="<?php echo IMG; ?>/logo-white.png" alt=""></a>
           </div>
           <div class="main-header__secure">Secure<br>checkout</div>
           <div class="main-header__right">

@@ -27,8 +27,8 @@
       </div>
     </div>
     <div class="discount-btns">
-      <button class="btn btn-continue closeDiscount">Continue shopping</button>
-      <button class="btn btn-add openCart">SECURE CHECKOUT</button>
+      <button class="btn btn-continue closeDiscount">CONTINUE SHOPPING</button>
+      <button class="btn btn-add openCart">GO TO CHECKOUT</button>
     </div>
   </div>
 </div>

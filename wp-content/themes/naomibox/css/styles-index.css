@@ -664,6 +664,10 @@ body {
     -webkit-box-align: center;
             align-items: center;
     min-height: 80px; }
+    @media (max-width: 767px) {
+      .main-header .container {
+        -webkit-box-pack: center;
+                justify-content: center; } }
   .main-header__logo {
     display: -webkit-box;
     display: flex;
@@ -676,16 +680,13 @@ body {
         .main-header__logo img {
           margin-right: 30px; } }
     .main-header__logo span {
-      display: none;
-      font-size: 20px;
+      display: block;
+      font-size: 32px;
       font-weight: 600; }
-      @media (min-width: 768px) {
-        .main-header__logo span {
-          font-size: 32px;
-          display: block; } }
   .main-header__info {
     text-decoration: none;
-    margin-left: auto; }
+    margin-left: auto;
+    display: none; }
     @media (min-width: 768px) {
       .main-header__info {
         display: -webkit-box;
@@ -1203,11 +1204,6 @@ body {
     background: none;
     text-transform: uppercase; }
 
-@property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false; }
-
 .banner {
   position: relative;
   background: url("../img/main-bg.jpg") no-repeat top center/cover;
@@ -1282,22 +1278,12 @@ body {
       -webkit-box-pack: center;
               justify-content: center;
       margin-bottom: 10px;
-      font-size: 15px;
-      transition: --num 1s linear;
-      counter-set: num var(--num); }
+      font-size: 15px; }
       @media (min-width: 768px) {
         .banner__sales span {
           font-size: 18px;
           height: 80px;
           width: 80px; } }
-      .banner__sales span:after {
-        content: counter(num) "%"; }
-  .banner-anim .num-10 {
-    --num: -10; }
-  .banner-anim .num-15 {
-    --num: -15; }
-  .banner-anim .num-20 {
-    --num: -20; }
 
 .products {
   padding-top: 40px;
@@ -1406,6 +1392,10 @@ body {
     @media (min-width: 768px) {
       .preview h3 {
         font-size: 18px; } }
+  @media (max-width: 767px) {
+    .preview iframe {
+      max-width: 100%;
+      height: auto; } }
 
 .reviews {
   background: #faf9f5;

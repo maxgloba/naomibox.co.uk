@@ -96,7 +96,6 @@ if ( post_password_required() ) {
         echo '
         <div class="btns">
           <button class="btn btn-add addToCart" data-product_id="'.$id.'" data-quantity="1">add to card</button>
-          <a href="'.esc_url( wc_get_checkout_url() ).'" class="btn btn-more">Secure checkout</a>
         </div>
         ';
       }

@@ -758,13 +758,12 @@ body {
             align-items: center;
     -webkit-box-pack: center;
             justify-content: center; }
+    @media (max-width: 767px) {
+      .main-header__secure {
+        display: none; } }
   .main-header__right {
     margin-left: auto;
     color: #fff; }
-    @media (max-width: 767px) {
-      .main-header__right {
-        width: 100%;
-        padding-top: 10px; } }
     .main-header__right .questions {
       padding-top: 4px;
       font-size: 12px; }
@@ -776,14 +775,9 @@ body {
       -webkit-box-align: center;
               align-items: center;
       font-size: 12px;
-      padding: 4px 0; }
-      @media (max-width: 767px) {
-        .main-header__right .feature {
-          padding: 10px 0 4px; } }
-      @media (min-width: 768px) {
-        .main-header__right .feature {
-          -webkit-box-pack: end;
-                  justify-content: flex-end; } }
+      padding: 4px 0;
+      -webkit-box-pack: end;
+              justify-content: flex-end; }
       .main-header__right .feature img {
         width: 45px; }
       .main-header__right .feature-text {

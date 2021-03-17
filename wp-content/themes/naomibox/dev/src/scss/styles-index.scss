@@ -9,12 +9,6 @@
 
 @import 'components/btn';
 
-@property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-
 .banner{
   position: relative;
   background: url('../img/main-bg.jpg') no-repeat top center/cover;
@@ -84,28 +78,10 @@
       justify-content: center;
       margin-bottom: 10px;
       font-size: 15px;
-      transition: --num 1s linear;
-      counter-set: num var(--num);
       @media(min-width:768px){
         font-size: 18px;
         height: 80px;
         width: 80px;
-      }
-      &:after {
-        content: counter(num)"%";
-      }
-    }
-  }
-  &-anim{
-    .num{
-      &-10{
-        --num: -10;
-      }
-      &-15{
-        --num: -15;
-      }
-      &-20{
-        --num: -20;
       }
     }
   }
@@ -231,6 +207,12 @@
     margin-bottom: 15px;
     @media(min-width:768px){
       font-size: 18px;
+    }
+  }
+  iframe{
+    @media(max-width:767px){
+      max-width: 100%;
+      height: auto;
     }
   }
 }

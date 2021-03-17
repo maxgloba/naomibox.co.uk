@@ -664,6 +664,10 @@ body {
     -webkit-box-align: center;
             align-items: center;
     min-height: 80px; }
+    @media (max-width: 767px) {
+      .main-header .container {
+        -webkit-box-pack: center;
+                justify-content: center; } }
   .main-header__logo {
     display: -webkit-box;
     display: flex;
@@ -676,16 +680,13 @@ body {
         .main-header__logo img {
           margin-right: 30px; } }
     .main-header__logo span {
-      display: none;
-      font-size: 20px;
+      display: block;
+      font-size: 32px;
       font-weight: 600; }
-      @media (min-width: 768px) {
-        .main-header__logo span {
-          font-size: 32px;
-          display: block; } }
   .main-header__info {
     text-decoration: none;
-    margin-left: auto; }
+    margin-left: auto;
+    display: none; }
     @media (min-width: 768px) {
       .main-header__info {
         display: -webkit-box;

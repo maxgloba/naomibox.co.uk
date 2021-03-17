@@ -12,6 +12,9 @@
     justify-content: flex-start;
     align-items: center;
     min-height: 80px;
+    @media(max-width:767px){
+      justify-content: center;
+    }
   }
   &__logo{
     display: flex;
@@ -24,18 +27,15 @@
       }
     }
     span{
-      display: none;
-      font-size: 20px;
+      display: block;
+      font-size: 32px;
       font-weight: 600;
-      @media(min-width:768px){
-        font-size: 32px;
-        display: block;
-      }
     }
   }
   &__info{
     text-decoration: none;
     margin-left: auto;
+    display: none;
     @media(min-width:768px){
       display: flex;
     }

@@ -13,13 +13,13 @@ get_header(); ?>
       <h2>New customers - enjoy exclusive discounts on us!</h2>
       <div class="banner__sales">
         <div class="banner__sales-box">
-          <span class="num num-10"></span> 2 <br> puzzles
+          <span class="num">-10%</span> 2 <br> puzzles
         </div>
         <div class="banner__sales-box">
-          <span class="num num-15"></span> 3 <br> puzzles
+          <span class="num">-15%</span> 3 <br> puzzles
         </div>
         <div class="banner__sales-box">
-          <span class="num num-20"></span> 4 <br> puzzles
+          <span class="num">-20%</span> 4 <br> puzzles
         </div>
       </div>
     </div>

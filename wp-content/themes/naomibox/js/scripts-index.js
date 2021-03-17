@@ -209,10 +209,6 @@ closeDiscount.forEach(close => {
   END mini cart
 -------------------- */
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector('.banner').classList.add('banner-anim');
-});
-
 const faqs = document.querySelectorAll('.faq .question');
 faqs.forEach(faq => {
   faq.onclick = e => {
