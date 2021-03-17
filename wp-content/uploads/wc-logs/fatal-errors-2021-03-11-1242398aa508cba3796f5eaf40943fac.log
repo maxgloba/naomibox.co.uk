@@ -1,0 +1,4 @@
+2021-03-11T13:37:09+00:00 CRITICAL syntax error, unexpected '.100' (T_DNUMBER), expecting ',' or ';' in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\woocommerce\content-single-product.php on line 81
+
+2021-03-11T13:37:16+00:00 CRITICAL syntax error, unexpected '.100' (T_DNUMBER), expecting ',' or ';' in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\woocommerce\content-single-product.php on line 81
+

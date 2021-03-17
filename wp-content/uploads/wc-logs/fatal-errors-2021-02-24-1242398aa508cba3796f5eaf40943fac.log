@@ -1,0 +1,18 @@
+2021-02-24T07:51:35+00:00 CRITICAL Uncaught Error: Call to undefined function IMG() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\templates\page-index.php:15
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\template-loader.php(106): include()
+#1 C:\OSPanel\domains\naomibox.loc\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\naomibox.loc\index.php(17): require('C:\\OSPanel\\doma...')
+#3 {main}
+  thrown in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\templates\page-index.php on line 15
+
+2021-02-24T11:12:08+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\templates\page-index.php on line 42
+
+2021-02-24T11:49:00+00:00 CRITICAL Uncaught Error: Call to undefined function get_sale_price() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\templates\page-index.php:43
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\template-loader.php(106): include()
+#1 C:\OSPanel\domains\naomibox.loc\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\naomibox.loc\index.php(17): require('C:\\OSPanel\\doma...')
+#3 {main}
+  thrown in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\templates\page-index.php on line 43
+

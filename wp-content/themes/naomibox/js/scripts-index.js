@@ -1,0 +1,262 @@
+/* --------------------
+  START mini cart
+-------------------- */
+(function(){
+const cartAction = actionName => {
+  return new Promise((resolve, reject) => {
+    const
+      formData = new FormData(),
+      request = new XMLHttpRequest()
+
+    formData.append("action", actionName)
+    request.open('POST', data.ajax, true)
+
+    request.onload = function(){
+      if (this.status >= 200 && this.status < 400) {
+        resolve(this.response)
+      }
+    }
+
+    request.onerror = function(){
+      reject(this.response)
+    };
+
+    request.send(formData)
+  })
+}
+const cartActionAdd = (id, q) => {
+  return new Promise((resolve, reject) => {
+    const
+      formData = new FormData(),
+      request = new XMLHttpRequest()
+
+    formData.append("action", 'addToCart')
+    formData.append("p_id", id)
+    formData.append("p_q", q)
+
+    request.open('POST', data.ajax, true)
+
+    request.onload = function(){
+      if (this.status >= 200 && this.status < 400) {
+        resolve(this.response)
+      }
+    }
+
+    request.onerror = function(){
+      reject(this.response)
+    };
+
+    request.send(formData)
+  })
+}
+
+let addToCart = document.querySelectorAll('.addToCart');
+addToCart.forEach(add => {
+  add.onclick = e => {
+    e.preventDefault();
+
+    let q = e.target.dataset.quantity,
+      id = e.target.dataset.product_id;
+
+    cartActionAdd(id, q)
+      .then(() => cartAction('getItemsCount'))
+      .then(itemsCount => {
+        const discountSalesNums = document.querySelectorAll('.discount-sales .num');
+        discountSalesNums.forEach(num => {
+          num.classList.remove('num-active');
+        });
+        const cartDiscounts = document.querySelectorAll('.cartDiscount');
+        if(itemsCount == 1){
+          document.querySelector('.discount-sales .num-10').classList.add('num-active');
+          document.querySelector('.discount').classList.remove('discount-hide');
+          cartDiscounts.forEach(cartDiscount => {
+            cartDiscount.innerHTML = '-10%';
+          });
+        } else if(itemsCount == 2){
+          document.querySelector('.discount-sales .num-15').classList.add('num-active');
+          document.querySelector('.discount').classList.remove('discount-hide');
+          cartDiscounts.forEach(cartDiscount => {
+            cartDiscount.innerHTML = '-15%';
+          });
+        } else if(itemsCount == 3){
+          document.querySelector('.discount-sales .num-20').classList.add('num-active');
+          document.querySelector('.discount').classList.remove('discount-hide');
+          cartDiscounts.forEach(cartDiscount => {
+            cartDiscount.innerHTML = '-20%';
+          });
+        } else {
+          document.querySelector('.openCart').click();
+        }
+      })
+      .then(() => cartAction('getTotal'))
+      .then(getTotal => {
+        const cartTotals = document.querySelectorAll('.cartTotal');
+        cartTotals.forEach(total => {
+          total.innerHTML = getTotal;
+        });
+        document.querySelector('.cart-button').classList.remove('cart-button-hide');
+      });
+
+  }
+});
+const cartActionRemove = (id, q) => {
+  return new Promise((resolve, reject) => {
+    const
+      formData = new FormData(),
+      request = new XMLHttpRequest()
+
+    formData.append("action", 'removeFromCart')
+    formData.append("p_id", id)
+
+    request.open('POST', data.ajax, true)
+
+    request.onload = function(){
+      if (this.status >= 200 && this.status < 400) {
+        resolve(this.response)
+      }
+    }
+
+    request.onerror = function(){
+      reject(this.response)
+    };
+
+    request.send(formData)
+  })
+}
+
+let removeFromCart = () => {
+  let removeFromCart = document.querySelectorAll('.removeFromCart');
+  removeFromCart.forEach(remove => {
+    remove.addEventListener('click', e => {
+      e.preventDefault();
+
+      let id = e.target.dataset.product_id;
+
+      document.getElementById('product-'+id).remove();
+
+      cartActionRemove(id)
+        .then(() => cartAction('getTotal'))
+        .then(getTotal => {
+          const cartTotals = document.querySelectorAll('.cartTotal');
+          cartTotals.forEach(total => {
+            total.innerHTML = getTotal;
+          })
+        })
+        .then(() => cartAction('getDiscount'))
+        .then(getDiscount => {
+          const cartDiscounts = document.querySelectorAll('.cartDiscount');
+          cartDiscounts.forEach(cartDiscount => {
+            cartDiscount.innerHTML = getDiscount;
+          });
+
+          let cartItems = document.querySelectorAll('.cart-item');
+          if(cartItems.length === 0){
+            document.querySelector('.cart').classList.add('cart-hide');
+            document.querySelector('.cart-button').classList.add('cart-button-hide');
+          }
+        })
+
+    });
+  });
+}
+removeFromCart();
+const openCart = document.querySelectorAll('.openCart');
+openCart.forEach(btn => {
+  btn.onclick = () => {
+
+    document.querySelector('.discount').classList.add('discount-hide');
+
+    cartAction('getTotal')
+      .then(res => {
+        const cartTotals = document.querySelectorAll('.cartTotal');
+        cartTotals.forEach(total => {
+          total.innerHTML = res;
+        })
+      })
+      .then(() => cartAction('getCartItems'))
+      .then(res => {
+        document.querySelector('.cartItems').innerHTML = res;
+        removeFromCart();
+      })
+      .then(() => cartAction('getDiscount'))
+      .then(res => {
+        const cartDiscounts = document.querySelectorAll('.cartDiscount');
+        cartDiscounts.forEach(cartDiscount => {
+          cartDiscount.innerHTML = res;
+        });
+      })
+      .then(() => {
+        document.querySelector('.cart').classList.remove('cart-hide');
+      })
+  }
+});
+const closeCart = document.querySelectorAll('.closeCart');
+closeCart.forEach(btn => {
+  btn.onclick = e => {
+    e.preventDefault();
+    document.querySelector('.cart').classList.add('cart-hide');
+  }
+});
+const closeDiscount = document.querySelectorAll('.closeDiscount');
+closeDiscount.forEach(close => {
+  close.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector('.discount').classList.add('discount-hide');
+  });
+});
+})();
+/* --------------------
+  END mini cart
+-------------------- */
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector('.banner').classList.add('banner-anim');
+});
+
+const faqs = document.querySelectorAll('.faq .question');
+faqs.forEach(faq => {
+  faq.onclick = e => {
+    e.preventDefault();
+    e.target.parentNode.classList.toggle('active');
+  }
+});
+
+/*----- GS -----*/
+const gs = document.querySelector('.gs'),
+  gs_next = document.querySelector('.gs-next'),
+  gs_prev = document.querySelector('.gs-prev'),
+  gs_close = document.querySelector('.gs-close'),
+  gs_img = document.querySelector('.gs-img'),
+  gs_open = document.querySelectorAll('.gs-open'),
+  gs_wclose = document.querySelector('.gs-wclose');
+
+gs_next.onclick = e => {
+  let index = Number(gs_img.dataset.index) + 1;
+  if( index === gs_images.length) index = 0;
+  gs_img.src = gs_images[index];
+  gs_img.dataset.index = index;
+}
+gs_img.onclick = e => {
+  let index = Number(gs_img.dataset.index) + 1;
+  if( index === gs_images.length) index = 0;
+  gs_img.src = gs_images[index];
+  gs_img.dataset.index = index;
+}
+gs_prev.onclick = e => {
+  let index = Number(gs_img.dataset.index) - 1;
+  if( index === 0 || index < 0  ) index = gs_images.length - 1;
+  gs_img.src = gs_images[index];
+  gs_img.dataset.index = index;
+}
+gs_close.onclick = e => {
+  gs.classList.add('gs-hide');
+}
+gs_wclose.onclick = e => {
+  console.log('111');
+  gs.classList.add('gs-hide');
+}
+gs_open.forEach(item => {
+  item.onclick = e => {
+    gs.classList.remove('gs-hide');
+  }
+});

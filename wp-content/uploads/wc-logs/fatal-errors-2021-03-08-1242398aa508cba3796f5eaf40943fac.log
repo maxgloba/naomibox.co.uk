@@ -1,0 +1,22 @@
+2021-03-08T05:56:15+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on string in C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\templates\single-product\sale-flash.php:25
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1605): wc_get_template('single-product/...')
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(287): woocommerce_show_product_sale_flash('')
+#3 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 C:\OSPanel\domains\naomibox.loc\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#5 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\single-product.php(39): do_action('woocommerce_bef...')
+#6 C:\OSPanel\domains\naomibox.loc\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\naomibox.loc\wp-blog-header in C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\templates\single-product\sale-flash.php on line 25
+
+2021-03-08T05:56:53+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on string in C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\templates\single-product\sale-flash.php:25
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1605): wc_get_template('single-product/...')
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(287): woocommerce_show_product_sale_flash('')
+#3 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 C:\OSPanel\domains\naomibox.loc\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#5 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\single-product.php(14): do_action('woocommerce_bef...')
+#6 C:\OSPanel\domains\naomibox.loc\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\naomibox.loc\wp-blog-header in C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\templates\single-product\sale-flash.php on line 25
+

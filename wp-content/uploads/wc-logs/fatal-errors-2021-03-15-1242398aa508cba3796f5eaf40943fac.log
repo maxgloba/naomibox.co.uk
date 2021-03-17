@@ -1,0 +1,26 @@
+2021-03-15T13:17:24+00:00 CRITICAL syntax error, unexpected ';', expecting ',' or ')' in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-actions.php on line 7
+
+2021-03-15T13:26:56+00:00 CRITICAL Uncaught Error: Call to undefined function theTest() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\discount-template.php:36
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(732): require()
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', false, Array)
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\header.php(61): get_template_part('miniCart/discou...', 'template')
+#4 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(730): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', true, Array)
+#6 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#7 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\templates\page-index.php in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\discount-template.php on line 36
+
+2021-03-15T13:39:07+00:00 CRITICAL syntax error, unexpected '=' in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php on line 98
+
+2021-03-15T14:23:19+00:00 CRITICAL Uncaught Error: Call to undefined function theDiscount() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-template.php:10
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(732): require()
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', false, Array)
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\header.php(60): get_template_part('miniCart/cart', 'template')
+#4 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(730): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', true, Array)
+#6 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#7 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\templates\page-index.php(5):  in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-template.php on line 10
+

@@ -1,0 +1,56 @@
+2021-03-05T06:27:12+00:00 CRITICAL Uncaught Error: Call to undefined function woocommerce_cart_contents_total() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\include\getCart.php:3
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php(14): include()
+#1 C:\OSPanel\domains\naomibox.loc\wp-settings.php(525): include('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\naomibox.loc\wp-config.php(90): require_once('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\naomibox.loc\wp-load.php(37): require_once('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\naomibox.loc\wp-blog-header.php(13): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\index.php(17): require('C:\\OSPanel\\doma...')
+#6 {main}
+  thrown in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\include\getCart.php on line 3
+
+2021-03-05T06:29:39+00:00 CRITICAL Uncaught Error: Call to a member function cart_contents_total() on null in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\include\getCart.php:4
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php(14): include()
+#1 C:\OSPanel\domains\naomibox.loc\wp-settings.php(525): include('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\naomibox.loc\wp-config.php(90): require_once('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\naomibox.loc\wp-load.php(37): require_once('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\naomibox.loc\wp-blog-header.php(13): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\index.php(17): require('C:\\OSPanel\\doma...')
+#6 {main}
+  thrown in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\include\getCart.php on line 4
+
+2021-03-05T08:27:01+00:00 CRITICAL Uncaught Error: Call to undefined function getCartItems() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\mg-miniCart.php:7
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(732): require()
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', false, Array)
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\header.php(59): get_template_part('miniCart/mg', 'miniCart')
+#4 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(730): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', true, Array)
+#6 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#7 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\templates\page-index.php(5): get_ in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\mg-miniCart.php on line 7
+
+2021-03-05T08:32:22+00:00 CRITICAL Uncaught Error: Call to undefined function print_f() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-template.php:27
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(732): require()
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', false, Array)
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\header.php(59): get_template_part('miniCart/cart', 'template')
+#4 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(730): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', true, Array)
+#6 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#7 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\templates\page-index.php(5): get_ in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-template.php on line 27
+
+2021-03-05T08:52:33+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_the_ID() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\partials\mg-products.php:15
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(732): require()
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', false, Array)
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\templates\page-index.php(33): get_template_part('partials/mg', 'products')
+#4 C:\OSPanel\domains\naomibox.loc\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\naomibox.loc\index.php(17): require('C:\\OSPanel\\doma...')
+#7 {main}
+  thrown in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\partials\mg-products.php on line 15
+

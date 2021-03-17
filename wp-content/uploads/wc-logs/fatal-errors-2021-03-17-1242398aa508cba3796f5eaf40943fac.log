@@ -1,0 +1,30 @@
+2021-03-17T11:35:51+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on null in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\woocommerce\content-single-product.php:94
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(292): woocommerce_mg_addtocart('')
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\woocommerce\content-single-product.php(102): do_action('woocommerce_sin...')
+#4 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(732): require('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\OSPanel\\doma...', false)
+#6 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(598): wc_get_template_part('content', 'single-product')
+#7 C:\OSPan in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\woocommerce\content-single-product.php on line 94
+
+2021-03-17T11:36:01+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on null in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\woocommerce\content-single-product.php:95
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(292): woocommerce_mg_addtocart('')
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\woocommerce\content-single-product.php(103): do_action('woocommerce_sin...')
+#4 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(732): require('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\OSPanel\\doma...', false)
+#6 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(598): wc_get_template_part('content', 'single-product')
+#7 C:\OSPan in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\woocommerce\content-single-product.php on line 95
+
+2021-03-17T12:17:52+00:00 CRITICAL syntax error, unexpected 'if' (T_IF), expecting ':' in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\footer.php on line 41
+
+2021-03-17T12:17:55+00:00 CRITICAL syntax error, unexpected 'if' (T_IF), expecting ':' in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\footer.php on line 41
+
+2021-03-17T13:15:16+00:00 CRITICAL syntax error, unexpected '}', expecting end of file in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php on line 183
+
+2021-03-17T13:15:29+00:00 CRITICAL syntax error, unexpected '}', expecting end of file in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php on line 183
+

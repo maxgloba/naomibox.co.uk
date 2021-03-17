@@ -1,0 +1,99 @@
+2021-03-12T06:23:05+00:00 CRITICAL Uncaught Error: Call to undefined method WooCommerce::show_messages() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php:96
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(292): discount_when_produts_in_cart('')
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\templates\cart\cart.php(23): do_action('woocommerce_bef...')
+#4 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#6 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#7 C:\OSPan in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php on line 96
+
+2021-03-12T06:23:23+00:00 CRITICAL Uncaught Error: Call to undefined method WooCommerce::show_messages() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php:96
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(292): discount_when_produts_in_cart('')
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\templates\cart\cart.php(23): do_action('woocommerce_bef...')
+#4 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#6 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#7 C:\OSPan in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php on line 96
+
+2021-03-12T06:34:04+00:00 CRITICAL Uncaught Error: Call to undefined method WooCommerce::show_messages() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php:94
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(292): discount_when_produts_in_cart('')
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\templates\cart\cart.php(23): do_action('woocommerce_bef...')
+#4 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#6 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#7 C:\OSPan in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php on line 94
+
+2021-03-12T06:34:58+00:00 CRITICAL Uncaught Error: Call to undefined method WooCommerce::show_messages() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php:94
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(292): discount_when_produts_in_cart('')
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\templates\cart\cart.php(23): do_action('woocommerce_bef...')
+#4 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#6 C:\OSPanel\domains\naomibox.loc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#7 C:\OSPan in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\functions.php on line 94
+
+2021-03-12T12:19:38+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_discount_amount() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-actions.php:92
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-template.php(11): theCartDiscount()
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(732): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', false, Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#4 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\header.php(60): get_template_part('miniCart/cart', 'template')
+#5 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(730): require_once('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', true, Array)
+#7 C:\OSPanel\domains\naomibox.loc\wp-includes\general-tem in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-actions.php on line 92
+
+2021-03-12T12:19:51+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_discount_amount() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-actions.php:92
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-template.php(11): theCartDiscount()
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(732): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', false, Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#4 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\header.php(60): get_template_part('miniCart/cart', 'template')
+#5 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(730): require_once('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', true, Array)
+#7 C:\OSPanel\domains\naomibox.loc\wp-includes\general-tem in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-actions.php on line 92
+
+2021-03-12T12:20:01+00:00 CRITICAL Uncaught Error: Call to undefined function get_discount_amount() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-actions.php:92
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-template.php(11): theCartDiscount()
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(732): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', false, Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#4 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\header.php(60): get_template_part('miniCart/cart', 'template')
+#5 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(730): require_once('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', true, Array)
+#7 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.p in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-actions.php on line 92
+
+2021-03-12T12:21:02+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::get_discount() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-actions.php:92
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-template.php(11): theCartDiscount()
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(732): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', false, Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#4 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\header.php(60): get_template_part('miniCart/cart', 'template')
+#5 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(730): require_once('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', true, Array)
+#7 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.p in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-actions.php on line 92
+
+2021-03-12T12:48:27+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Cart::coupon_discount_amounts() in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-actions.php:94
+Stack trace:
+#0 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-template.php(27): theCartDiscount()
+#1 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(732): require('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', false, Array)
+#3 C:\OSPanel\domains\naomibox.loc\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#4 C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\header.php(60): get_template_part('miniCart/cart', 'template')
+#5 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(730): require_once('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\naomibox.loc\wp-includes\template.php(676): load_template('C:\\OSPanel\\doma...', true, Array)
+#7 C:\OSPanel\domains\naomibox.loc\wp-includes\general in C:\OSPanel\domains\naomibox.loc\wp-content\themes\naomibox\miniCart\cart-actions.php on line 94
+
