@@ -184,7 +184,7 @@ function redirect_mg() {
   } else if( is_cart() && !$woocommerce->cart->is_empty() ){
     wp_redirect(wc_get_checkout_url());
     exit();
-  } else if( is_checkout() && empty( $wp->query_vars['order-received'] ) ){
+  } else if( is_checkout() && !empty( is_wc_endpoint_url('order-received') ) ){
     wp_redirect( get_permalink(131) );
     exit();
   }
