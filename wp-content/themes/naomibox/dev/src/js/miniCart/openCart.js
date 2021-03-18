@@ -1,3 +1,4 @@
+let timerFlag = true;
 const openCart = document.querySelectorAll('.openCart');
 openCart.forEach(btn => {
   btn.onclick = () => {
@@ -26,5 +27,7 @@ openCart.forEach(btn => {
       .then(() => {
         document.querySelector('.cart').classList.remove('cart-hide');
       })
+    if(timerFlag) timer_counter(document.querySelector('[data-time]'));
+
   }
 });

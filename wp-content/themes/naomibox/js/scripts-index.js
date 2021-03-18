@@ -2,6 +2,7 @@
   START mini cart
 -------------------- */
 (function(){
+
 const cartAction = actionName => {
   return new Promise((resolve, reject) => {
     const
@@ -160,6 +161,7 @@ let removeFromCart = () => {
   });
 }
 removeFromCart();
+let timerFlag = true;
 const openCart = document.querySelectorAll('.openCart');
 openCart.forEach(btn => {
   btn.onclick = () => {
@@ -188,6 +190,8 @@ openCart.forEach(btn => {
       .then(() => {
         document.querySelector('.cart').classList.remove('cart-hide');
       })
+    if(timerFlag) timer_counter(document.querySelector('[data-time]'));
+
   }
 });
 const closeCart = document.querySelectorAll('.closeCart');
@@ -204,55 +208,119 @@ closeDiscount.forEach(close => {
     document.querySelector('.discount').classList.add('discount-hide');
   });
 });
+  const timer_counter = e => {
+    timerFlag = false;
+    const deadTime = '<i>00</i>:<i>00</i>:<i>00</i>';
+    if(!e.dataset.time) return deadTime;
+    const
+      now = new Date(),
+      timer = setInterval(() => {
+        const
+          deadline = new Date( now.getTime() + Number(e.dataset.time) * 60000 ),
+          dateNow = new Date(),
+          t = deadline - dateNow;
+
+        let
+          h = Math.floor((t % (1000 * 60 * 60 * 60)) / (1000 * 60 * 60)),
+          m = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)),
+          s = Math.floor((t % (1000 * 60)) / 1000);
+
+        h = (h < 10) ? `0${h}` : h;
+        m = (m < 10) ? `0${m}` : m;
+        s = (s < 10) ? `0${s}` : s;
+
+        if (t < 0){
+          clearInterval(timer);
+          alert("Reserve time has stalled and your goods can be bought by other buyers! Check what's left and continue.");
+          timer_counter(document.querySelector('[data-time]'));
+        }
+        e.innerHTML = (t < 0) ? deadTime : `<i>${h}</i>:<i>${m}</i>:<i>${s}</i>`;
+      }, 1000);
+  }
+
 })();
 /* --------------------
   END mini cart
 -------------------- */
 
-const faqs = document.querySelectorAll('.faq .question');
-faqs.forEach(faq => {
-  faq.onclick = e => {
+(function(){
+
+  let openPopup = document.querySelectorAll('[data-popup]');
+  for (let i = 0; i < openPopup.length; i++) {
+    openPopup[i].addEventListener('click', function(e){
+      e.preventDefault();
+      let popupID = e.target.dataset.popup,
+        popupContent = document.getElementById(popupID).innerHTML,
+        popupContentBox = document.getElementById('popupContentBox');
+      popupContentBox.innerHTML = popupContent;
+      document.body.classList.add('popup-active');
+    });
+  }
+
+  let closePopup = document.getElementById('closePopup');
+  closePopup.addEventListener('click', function(e){
     e.preventDefault();
-    e.target.parentNode.classList.toggle('active');
-  }
-});
+    document.body.classList.remove('popup-active');
+  });
 
-/*----- GS -----*/
-const gs = document.querySelector('.gs'),
-  gs_next = document.querySelector('.gs-next'),
-  gs_prev = document.querySelector('.gs-prev'),
-  gs_close = document.querySelector('.gs-close'),
-  gs_img = document.querySelector('.gs-img'),
-  gs_open = document.querySelectorAll('.gs-open'),
-  gs_wclose = document.querySelector('.gs-wclose');
+})();
+(function(){
 
-gs_next.onclick = e => {
-  let index = Number(gs_img.dataset.index) + 1;
-  if( index === gs_images.length) index = 0;
-  gs_img.src = gs_images[index];
-  gs_img.dataset.index = index;
-}
-gs_img.onclick = e => {
-  let index = Number(gs_img.dataset.index) + 1;
-  if( index === gs_images.length) index = 0;
-  gs_img.src = gs_images[index];
-  gs_img.dataset.index = index;
-}
-gs_prev.onclick = e => {
-  let index = Number(gs_img.dataset.index) - 1;
-  if( index === 0 || index < 0  ) index = gs_images.length - 1;
-  gs_img.src = gs_images[index];
-  gs_img.dataset.index = index;
-}
-gs_close.onclick = e => {
-  gs.classList.add('gs-hide');
-}
-gs_wclose.onclick = e => {
-  console.log('111');
-  gs.classList.add('gs-hide');
-}
-gs_open.forEach(item => {
-  item.onclick = e => {
-    gs.classList.remove('gs-hide');
+  const faqs = document.querySelectorAll('.faq .question');
+  faqs.forEach(faq => {
+    faq.onclick = e => {
+      e.preventDefault();
+      e.target.parentNode.classList.toggle('active');
+    }
+  });
+
+})();
+(function(){
+
+  const gs = document.querySelector('.gs'),
+    gs_next = document.querySelector('.gs-next'),
+    gs_prev = document.querySelector('.gs-prev'),
+    gs_close = document.querySelector('.gs-close'),
+    gs_img = document.querySelector('.gs-img'),
+    gs_open = document.querySelectorAll('.gs-open'),
+    gs_wclose = document.querySelector('.gs-wclose');
+
+  gs_next.onclick = e => {
+    let index = Number(gs_img.dataset.index) + 1;
+    if( index === gs_images.length) index = 0;
+    gs_img.src = gs_images[index];
+    gs_img.dataset.index = index;
   }
-});
+  gs_img.onclick = e => {
+    let index = Number(gs_img.dataset.index) + 1;
+    if( index === gs_images.length) index = 0;
+    gs_img.src = gs_images[index];
+    gs_img.dataset.index = index;
+  }
+  gs_prev.onclick = e => {
+    let index = Number(gs_img.dataset.index) - 1;
+    if( index === 0 || index < 0  ) index = gs_images.length - 1;
+    gs_img.src = gs_images[index];
+    gs_img.dataset.index = index;
+  }
+  gs_close.onclick = e => {
+    gs.classList.add('gs-hide');
+  }
+  gs_wclose.onclick = e => {
+    console.log('111');
+    gs.classList.add('gs-hide');
+  }
+  gs_open.forEach(item => {
+    item.onclick = e => {
+      gs.classList.remove('gs-hide');
+    }
+  });
+
+})();
+
+let productScroll = localStorage.getItem('productScroll'),
+  productBox = document.getElementsByClassName(`${productScroll}`);
+if(productScroll){
+  productBox[0].scrollIntoView();
+  localStorage.removeItem('productScroll');
+}

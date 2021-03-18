@@ -83,6 +83,8 @@
       </footer>
     <?php endif; ?>
 
+    <?php get_template_part( 'partials/mg', 'popup' ); ?>
+
     <?php wp_footer(); ?>
   </body>
 </html>

@@ -40,6 +40,7 @@ function front_scripts() {
 // Checkout
   if( is_checkout() ){
     wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles-checkout.css');
+    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts-checkout.js', false, false, 'in_footer');
   }
 
 // Cart

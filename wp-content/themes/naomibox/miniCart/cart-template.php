@@ -2,7 +2,7 @@
   <div class="cart-wrap">
     <button class="cart-close closeCart"><i class="fas fa-times"></i></button>
     <h3>Basket</h3>
-    <div class="cart-reserve">Items reserved for <span>02:33</span> min</div>
+    <div class="cart-reserve">Items reserved for <span data-time="30">30:00</span> min</div>
     <div class="cart-items cartItems">
       <?php echo theCartItems(); ?>
     </div>

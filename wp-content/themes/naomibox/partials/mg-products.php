@@ -15,8 +15,8 @@
       $id = $product->get_id();
       $discount = $price * 100 / $regular - 100;
 ?>
-    <div class="col-md-4 product">
-      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+    <div class="col-md-4 product product_<?php echo $id; ?>">
+      <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"></a>
       <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
       <div class="product-desc"><?php the_excerpt(); ?></div>
       <div class="price-wrap">
