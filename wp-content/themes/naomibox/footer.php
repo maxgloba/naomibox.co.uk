@@ -85,6 +85,8 @@
 
     <?php get_template_part( 'partials/mg', 'popup' ); ?>
 
+    <div id="loader" class="loader loader-hide"></div>
+
     <?php wp_footer(); ?>
   </body>
 </html>

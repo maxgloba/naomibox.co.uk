@@ -5,6 +5,8 @@ openCart.forEach(btn => {
 
     document.querySelector('.discount').classList.add('discount-hide');
 
+    document.querySelector('.loader').classList.remove('loader-hide');
+
     cartAction('getTotal')
       .then(res => {
         const cartTotals = document.querySelectorAll('.cartTotal');
@@ -26,6 +28,7 @@ openCart.forEach(btn => {
       })
       .then(() => {
         document.querySelector('.cart').classList.remove('cart-hide');
+        document.querySelector('.loader').classList.add('loader-hide');
       })
     if(timerFlag) timer_counter(document.querySelector('[data-time]'));
 

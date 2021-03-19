@@ -58,6 +58,8 @@ addToCart.forEach(add => {
     let q = e.target.dataset.quantity,
       id = e.target.dataset.product_id;
 
+    document.querySelector('.loader').classList.remove('loader-hide');
+
     cartActionAdd(id, q)
       .then(() => cartAction('getItemsCount'))
       .then(itemsCount => {
@@ -95,6 +97,7 @@ addToCart.forEach(add => {
           total.innerHTML = getTotal;
         });
         document.querySelector('.cart-button').classList.remove('cart-button-hide');
+        document.querySelector('.loader').classList.add('loader-hide');
       });
 
   }
@@ -167,6 +170,8 @@ openCart.forEach(btn => {
 
     document.querySelector('.discount').classList.add('discount-hide');
 
+    document.querySelector('.loader').classList.remove('loader-hide');
+
     cartAction('getTotal')
       .then(res => {
         const cartTotals = document.querySelectorAll('.cartTotal');
@@ -188,6 +193,7 @@ openCart.forEach(btn => {
       })
       .then(() => {
         document.querySelector('.cart').classList.remove('cart-hide');
+        document.querySelector('.loader').classList.add('loader-hide');
       })
     if(timerFlag) timer_counter(document.querySelector('[data-time]'));
 
