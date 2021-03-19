@@ -95,7 +95,7 @@ if ( post_password_required() ) {
         $id = $product->get_id();
         echo '
         <div class="btns">
-          <button class="btn btn-add addToCart" data-product_id="'.$id.'" data-quantity="1">add to card</button>
+          <button class="btn btn-add addToCart" data-product_id="'.$id.'" data-quantity="1">add to cart</button>
         </div>
         ';
       }

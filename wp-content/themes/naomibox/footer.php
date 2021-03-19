@@ -2,13 +2,13 @@
       <footer class="main-footer">
         <div class="container">
           <div class="row">
-            <div class="col">
+            <div class="col-md-4">
               <div class="main-footer__logo">
                 <img src="<?php echo IMG; ?>/logo-white.png" alt="">
                 <span>Naomi Box</span>
               </div>
             </div>
-            <div class="col">
+            <div class="col-md-4">
               <h4>Contacts</h4>
               <ul>
                 <li>
@@ -25,7 +25,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col">
+            <div class="col-md-4">
               <h4>Pages</h4>
               <ul>
                 <li><a href="#" data-popup="terms">Terms of service</a></li>
@@ -44,7 +44,7 @@
       <footer class="main-footer">
         <div class="container">
           <div class="row">
-            <div class="col">
+            <div class="col-md-3">
               <h4>Pages</h4>
               <ul>
                 <li><a href="#" data-popup="terms">Terms of service</a></li>
@@ -54,7 +54,7 @@
                 <li><a href="#" data-popup="contact">Contact Us</a></li>
               </ul>
             </div>
-            <div class="col">
+            <div class="col-md-3">
               <h4>Payments methods</h4>
               <ul>
                 <li>
@@ -65,14 +65,14 @@
                 </li>
               </ul>
             </div>
-            <div class="col">
+            <div class="col-md-3">
               <h4>Guarantee</h4>
               <ul>
                 <li>30-Day Moneyback Guarantee</li>
               </ul>
             </div>
 
-            <div class="col">
+            <div class="col-md-3">
               <div class="main-footer__logo">
                 <img src="<?php echo IMG; ?>/logo-white.png" alt="">
               </div>

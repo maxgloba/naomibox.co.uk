@@ -30,7 +30,7 @@
       </div>
       <ul>
         <li><a class="btn btn-more" href="<?php the_permalink(); ?>">Learn more</a></li>
-        <li><button class="btn btn-add addToCart" data-product_id="<?php echo $id; ?>" data-quantity="1">add to card</button></li>
+        <li><button class="btn btn-add addToCart" data-product_id="<?php echo $id; ?>" data-quantity="1">add to cart</button></li>
       </ul>
     </div>
 <?php endwhile; wp_reset_query(); ?>
