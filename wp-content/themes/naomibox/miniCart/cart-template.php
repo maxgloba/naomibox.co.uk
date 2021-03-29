@@ -13,8 +13,8 @@
     </div>
 
     <div class="cart-shipping">
-      Shipping:
-      <span>(2-4 working days): £8,98</span>
+      Express Delivery (2-4 working days):
+      <span>£8,98</span>
     </div>
 
     <div class="cart-total">
