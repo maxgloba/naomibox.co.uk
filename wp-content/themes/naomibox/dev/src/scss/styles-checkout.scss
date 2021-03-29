@@ -198,8 +198,7 @@
 }
 
 .wc-credit-card-form{
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   .form-row{
     flex: 1 calc(50% - 10px);
     max-width: calc(50% - 10px);
