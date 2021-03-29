@@ -12,6 +12,11 @@
       <span class="cartDiscount"><?php echo theDiscount(); ?></span>
     </div>
 
+    <div class="cart-shipping">
+      Shipping:
+      <span>(2-4 working days): £8,98</span>
+    </div>
+
     <div class="cart-total">
       Total:
       <span class="cartTotal"><?php echo theTotal(); ?></span>

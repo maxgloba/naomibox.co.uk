@@ -3,6 +3,7 @@
 -------------------- */
 (function(){
 
+//= miniCart/quantity.js
 //= miniCart/cartAction.js
 //= miniCart/addToCart.js
 //= miniCart/removeFromCart.js

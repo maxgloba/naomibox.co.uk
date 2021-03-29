@@ -71,13 +71,16 @@
     padding-bottom: 15px;
     border-bottom: 1px solid $gray;
   }
-  &-discount{
+  &-discount, &-shipping{
     font-size: 16px;
     color: $gray;
     display: flex;
     span{
       margin-left: auto;
     }
+  }
+  &-shipping{
+    padding-top: 10px;
   }
   &-total{
     font-size: 16px;

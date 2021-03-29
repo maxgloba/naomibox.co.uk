@@ -971,13 +971,15 @@ body {
     text-align: center;
     padding-bottom: 15px;
     border-bottom: 1px solid #bdbdbd; }
-  .cart-discount {
+  .cart-discount, .cart-shipping {
     font-size: 16px;
     color: #bdbdbd;
     display: -webkit-box;
     display: flex; }
-    .cart-discount span {
+    .cart-discount span, .cart-shipping span {
       margin-left: auto; }
+  .cart-shipping {
+    padding-top: 10px; }
   .cart-total {
     font-size: 16px;
     margin-top: 10px;
