@@ -13,7 +13,7 @@
     </div>
 
     <div class="cart-total">
-      Total:
+      Order Total:
       <span class="cartTotal"><?php echo theTotal(); ?></span>
     </div>
     <a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn btn-add">SECURE CHECKOUT</a>

@@ -112,7 +112,9 @@ if ( post_password_required() ) {
       do_action( 'woocommerce_after_single_product_summary' );
     ?>
     <div class="gift"><b>Gift!</b> Place an order now get a wooden stand for a cup in the form of a puzzle as a gift!</div>
-    <div class="quality"><i class="fa fa-university" aria-hidden="true"></i> Quality assurance! Return or exchange of goods within 14 days after purchase.</div>
+	<div class="quality"><i class="fas fa-shipping-fast" aria-hidden="true"></i>All jigsaw orders are usually processed and shipped within 1-2 busines day. Once shipped, please allow 2-4 business days for your order to be delivered.
+</div>  
+    <div class="quality"><i class="fa fa-university" aria-hidden="true"></i> Quality assurance! Return or exchange of goods within 30 days after purchase.</div>
   </div>
 </div>
 

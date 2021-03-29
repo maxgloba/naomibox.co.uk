@@ -1038,9 +1038,7 @@ body {
   font-size: 16px; }
 
 .wc-credit-card-form {
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap; }
+  display: block; }
   .wc-credit-card-form .form-row {
     -webkit-box-flex: 1;
             flex: 1 calc(50% - 10px);
