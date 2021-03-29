@@ -1050,6 +1050,8 @@ body {
         border: 1px solid #bdbdbd;
         background: none;
         font-size: 16px; }
+        .cart-item .quantity button:hover {
+          opacity: .5; }
       .cart-item .quantity span {
         font-size: 14px;
         line-height: 26px; }

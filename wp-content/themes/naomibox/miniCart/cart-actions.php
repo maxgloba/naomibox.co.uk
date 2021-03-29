@@ -30,10 +30,10 @@ function theCartItems() {
     $items_html .= '<div class="cart-item" id="product-'.$values['product_id'].'">';
       $items_html .= '<button class="cart-remove removeFromCart" data-product_id="'.$values['product_id'].'">+</button>';
       $items_html .= '<img src="'. $image[0] .'">';
-      $items_html .= '<div class=".info">';
+      $items_html .= '<div class="info">';
         $items_html .= '<h4>'.$p->get_title().'</h4>';
         $items_html .= '<div class="excerpt">'. $p->get_short_description() .'</div>';
-        $items_html .= '<div class="quantity"><button class="quantity-minus">-</button><span class="quantity-num">'. $values['quantity'] .'</span><button class="quantity-plus" data-product_id="'.$values['product_id'].'" data-quantity="1">+</button><span class="price">'. $price .'</span></div>';
+        $items_html .= '<div class="quantity"><button class="quantity-minus" data-product_id="'.$values['product_id'].'">-</button><span class="quantity-num quantity-num__'.$values['product_id'].'">'. $values['quantity'] .'</span><button class="quantity-plus" data-product_id="'.$values['product_id'].'">+</button><span class="price">'. $price .'</span></div>';
         // $items_html .= '<div class="quantity"><span class="quantity-num" style="width:80px;">Quantity: '. $values['quantity'] .'</span><span class="price">'. $price .'</span></div>';
       $items_html .= '</div>';
     $items_html .= '</div>';
@@ -165,4 +165,43 @@ add_action('wp_ajax_getItemsCount', 'getItemsCount');
 add_action('wp_ajax_nopriv_getItemsCount', 'getItemsCount');
 /* --------------------
   END CartDiscount
+-------------------- */
+/* --------------------
+  START setCartQuantity
+-------------------- */
+function setCartQuantity(){
+  global $woocommerce;
+
+  $woocommerce->cart->remove_coupons();
+
+  $p_id = $_POST['p_id'];
+  $p_q = $_POST['p_q'];
+
+  foreach ( $woocommerce->cart->get_cart() as $cart_item_key => $cart_item ) {
+    if($cart_item['product_id'] == $p_id ){
+      if( $woocommerce->cart->remove_cart_item( $cart_item_key ) ){
+        if( $woocommerce->cart->add_to_cart( $product_id = $p_id, $quantity = $p_q ) ){
+          $items_count = $woocommerce->cart->cart_contents_count;
+
+          if( $items_count == 2 ) {
+            $coupon_code = 'puzzles_2';
+          } else if( $items_count == 3 ){
+            $coupon_code = 'puzzles_3';
+          } else if( $items_count >= 4 ){
+            $coupon_code = 'puzzles_4';
+          }
+
+          $woocommerce->cart->add_discount( sanitize_text_field( $coupon_code ) );
+
+          return 'Changed quantity product with id: '.$p_id;
+        }
+      }
+    }
+  }
+  wp_die();
+}
+add_action('wp_ajax_setCartQuantity', 'setCartQuantity');
+add_action('wp_ajax_nopriv_setCartQuantity', 'setCartQuantity');
+/* --------------------
+  END setCartQuantity
 -------------------- */

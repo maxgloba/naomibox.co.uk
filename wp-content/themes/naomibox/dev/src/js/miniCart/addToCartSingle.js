@@ -70,7 +70,6 @@ addToCart.forEach(add => {
           total.innerHTML = getTotal;
         });
         document.querySelector('.cart-button').classList.remove('cart-button-hide');
-        quantity();
       });
   }
 });

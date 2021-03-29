@@ -53,7 +53,6 @@ let removeFromCart = () => {
             document.querySelector('.cart').classList.add('cart-hide');
             document.querySelector('.cart-button').classList.add('cart-button-hide');
           }
-          quantity();
         })
 
     });

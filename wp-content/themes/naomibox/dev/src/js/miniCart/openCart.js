@@ -18,6 +18,8 @@ openCart.forEach(btn => {
       .then(res => {
         document.querySelector('.cartItems').innerHTML = res;
         removeFromCart();
+        quantityPlus();
+        quantityMinus();
       })
       .then(() => cartAction('getDiscount'))
       .then(res => {
@@ -32,7 +34,6 @@ openCart.forEach(btn => {
       })
     if(timerFlag) timer_counter(document.querySelector('[data-time]'));
 
-    quantity();
 
   }
 });

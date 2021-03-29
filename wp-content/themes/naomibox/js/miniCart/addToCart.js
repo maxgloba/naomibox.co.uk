@@ -73,7 +73,6 @@ addToCart.forEach(add => {
         document.querySelector('.cart-button').classList.remove('cart-button-hide');
         document.querySelector('.loader').classList.add('loader-hide');
 
-        quantity();
 
       });
 
