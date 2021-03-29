@@ -12,6 +12,11 @@
       <span class="cartDiscount"><?php echo theDiscount(); ?></span>
     </div>
 
+    <div class="cart-shipping">
+      Express Delivery (2-4 working days):
+      <span>£8,98</span>
+    </div>
+
     <div class="cart-total">
       Order Total:
       <span class="cartTotal"><?php echo theTotal(); ?></span>

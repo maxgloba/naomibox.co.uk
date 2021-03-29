@@ -32,5 +32,7 @@ openCart.forEach(btn => {
       })
     if(timerFlag) timer_counter(document.querySelector('[data-time]'));
 
+    quantity();
+
   }
 });

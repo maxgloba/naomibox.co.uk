@@ -3,6 +3,24 @@
 -------------------- */
 (function(){
 
+let quantity = () => {
+  let quantityPlus = document.querySelectorAll('.quantity-plus');
+  quantityPlus.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      console.dir(e.target);
+    });
+  });
+  let quantityMinus = document.querySelectorAll('.quantity-minus');
+  quantityMinus.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      console.dir(e.target);
+    });
+  });
+  console.log('quantity');
+}
+quantity();
 const cartAction = actionName => {
   return new Promise((resolve, reject) => {
     const
@@ -99,6 +117,9 @@ addToCart.forEach(add => {
         });
         document.querySelector('.cart-button').classList.remove('cart-button-hide');
         document.querySelector('.loader').classList.add('loader-hide');
+
+        quantity();
+
       });
 
   }
@@ -158,6 +179,7 @@ let removeFromCart = () => {
             document.querySelector('.cart').classList.add('cart-hide');
             document.querySelector('.cart-button').classList.add('cart-button-hide');
           }
+          quantity();
         })
 
     });
@@ -197,6 +219,8 @@ openCart.forEach(btn => {
         document.querySelector('.loader').classList.add('loader-hide');
       })
     if(timerFlag) timer_counter(document.querySelector('[data-time]'));
+
+    quantity();
 
   }
 });

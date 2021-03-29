@@ -33,8 +33,8 @@ function theCartItems() {
       $items_html .= '<div class=".info">';
         $items_html .= '<h4>'.$p->get_title().'</h4>';
         $items_html .= '<div class="excerpt">'. $p->get_short_description() .'</div>';
-        // $items_html .= '<div class="quantity"><button class="quantity-minus">-</button><span class="quantity-num">'. $values['quantity'] .'</span><button class="quantity-plus addToCart" data-product_id="'.$values['product_id'].'" data-quantity="1">+</button><span class="price">'. $price .'</span></div>';
-        $items_html .= '<div class="quantity"><span class="quantity-num" style="width:80px;">Quantity: '. $values['quantity'] .'</span><span class="price">'. $price .'</span></div>';
+        $items_html .= '<div class="quantity"><button class="quantity-minus">-</button><span class="quantity-num">'. $values['quantity'] .'</span><button class="quantity-plus" data-product_id="'.$values['product_id'].'" data-quantity="1">+</button><span class="price">'. $price .'</span></div>';
+        // $items_html .= '<div class="quantity"><span class="quantity-num" style="width:80px;">Quantity: '. $values['quantity'] .'</span><span class="price">'. $price .'</span></div>';
       $items_html .= '</div>';
     $items_html .= '</div>';
   }
