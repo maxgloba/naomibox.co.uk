@@ -14,7 +14,7 @@
 
     <div class="cart-shipping">
       Express Delivery (2-4 working days):
-      <span>£8,98</span>
+      <span>£5,98</span>
     </div>
 
     <div class="cart-total">
