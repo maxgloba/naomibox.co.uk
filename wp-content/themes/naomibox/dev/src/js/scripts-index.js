@@ -27,3 +27,5 @@ if(productScroll){
   productBox[0].scrollIntoView();
   localStorage.removeItem('productScroll');
 }
+
+document.querySelector('.woocommerce-notices-wrapper').innerHTML = ' ';
